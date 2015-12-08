@@ -1,0 +1,6 @@
+*.rpm
+*~
+*.orig
+backups
+*.repo
+configs
