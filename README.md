@@ -90,9 +90,8 @@ bconsole can be invoked from outside of the container:
     docker exec -ti bacula-dir bconsole
 ## Support
 
-These images are provided free of charge by RedCoolBeans, however they are not
-supported by RedCoolBeans or Bacula Systems in any way. Various security measures
-have not been implemented or added in these images either.
+These images are provided free of charge by RedCoolBeans. Various security measures
+have not been implemented or added in these images.
 For supported and security hardened images with Bacula Enterprise, please
 [contact us](http://www.redcoolbeans.com/contact/).
 
