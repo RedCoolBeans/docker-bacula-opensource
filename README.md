@@ -10,6 +10,14 @@ assumed that `docker-compose` is used to start the containers. For actual
 deployment the `docker` binary ought to be used directly (e.g. by starting
 the containers as a service).
 
+## Images
+
+The images are available on the [Docker Hub](https://hub.docker.com/) as:
+- [redcoolbeans/bacula-opensource-db-data](https://hub.docker.com/r/redcoolbeans/bacula-opensource-db-data/)
+- [redcoolbeans/bacula-opensource-db](https://hub.docker.com/r/redcoolbeans/bacula-opensource-db/)
+- [redcoolbeans/bacula-opensource-dir](https://hub.docker.com/r/redcoolbeans/bacula-opensource-dir/)
+- [redcoolbeans/bacula-opensource-sd](https://hub.docker.com/r/redcoolbeans/bacula-opensource-sd/)
+
 ## Requirements
 
 The following components are required for this setup:
