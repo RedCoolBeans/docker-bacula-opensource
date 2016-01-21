@@ -1,7 +1,7 @@
 FROM centos:7
 
 MAINTAINER "Jasper Lievisse Adriaanse" <jasper@redcoolbeans.com>
-ENV BACULA_VERSION "7.2.0"
+ENV BACULA_VERSION "7.4.0"
 LABEL com.baculasystems.bacula.version="${BACULA_VERSION}" \
       com.redcoolbeans.image.version="1.0.0"
 
