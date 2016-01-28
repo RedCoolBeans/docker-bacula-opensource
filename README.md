@@ -17,6 +17,7 @@ The images are available on the [Docker Hub](https://hub.docker.com/) as:
 - [redcoolbeans/bacula-opensource-db](https://hub.docker.com/r/redcoolbeans/bacula-opensource-db/)
 - [redcoolbeans/bacula-opensource-dir](https://hub.docker.com/r/redcoolbeans/bacula-opensource-dir/)
 - [redcoolbeans/bacula-opensource-sd](https://hub.docker.com/r/redcoolbeans/bacula-opensource-sd/)
+- [redcoolbeans/bacula-opensource-fd](https://hub.docker.com/r/redcoolbeans/bacula-opensource-fd/)
 
 ## Requirements
 
@@ -51,12 +52,13 @@ When this has succesfully completed you can start the containers:
 
 	docker-compose up
 
-This will spawn four containers, which can be verified with `docker ps`:
+This will spawn five containers, which can be verified with `docker ps`:
 
 - *bacula-db-data*: data volume container; will not actually run but provide a persistent storage
 - *bacula-db*: PostgreSQL container, using storage provided by `bacula-db-data`
 - *bacula-dir*: Bacula Director container
 - *bacula-sd*: Bacula Storage Daemon container
+- *bacula-fd*: Bacula File Daemon (client) container
 
 docker-compose will run in the foreground and multiplex the container's output to the
 controlling terminal. To run all containers in the background:
@@ -96,6 +98,20 @@ The most common options:
 bconsole can be invoked from outside of the container:
 
     docker exec -ti bacula-dir bconsole
+
+## Bacula client
+
+A Bacula client container is started which runs the client daemon. The following environment
+variables are used to configure it's `bacula-fd.conf`:
+
+- FD_NAME
+- FD_PASSWORD
+- DIR_NAME
+- MON_NAME
+- MON_FD_PASSWORD
+
+Of which only `FD_PASSWORD` _must_ be set, the others have default values.
+
 ## Support
 
 These images are provided free of charge by RedCoolBeans. Various security measures
@@ -109,3 +125,6 @@ For supported and security hardened images with Bacula Enterprise, please
 - e-mail notifications are not enabled in the default configuration shipped with
   this demonstration setup. If e-mail is desired it can be enabled and pointed to
   an existing mailhost.
+- Mounting a local `bacula-fd.conf` into the `bacula-fd` container is not supported
+  yet. Due to the limited configuration possible in this file it is advised to set
+  the documented environment variables for now.
