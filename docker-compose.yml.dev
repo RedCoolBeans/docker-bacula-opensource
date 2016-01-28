@@ -42,3 +42,15 @@ bacula-sd:
     - ./backups:/b:rw
   environment:
     BACULA_DEBUG: 100
+
+#bacula-fd:
+#  build: bacula-fd
+#  container_name: bacula-fd
+#  hostname: bacula-fd
+#  ports:
+#    - "9102:9102" # fd -> sd
+#  volumes:
+#    - /:/mnt:ro
+#  environment:
+#    BACULA_DEBUG: 100
+#    FD_PASSWORD: 5ecre7
