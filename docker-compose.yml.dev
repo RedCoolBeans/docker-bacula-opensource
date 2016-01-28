@@ -43,14 +43,14 @@ bacula-sd:
   environment:
     BACULA_DEBUG: 100
 
-#bacula-fd:
-#  build: bacula-fd
-#  container_name: bacula-fd
-#  hostname: bacula-fd
-#  ports:
-#    - "9102:9102" # fd -> sd
-#  volumes:
-#    - /:/mnt:ro
-#  environment:
-#    BACULA_DEBUG: 100
-#    FD_PASSWORD: 5ecre7
+bacula-fd:
+  build: bacula-fd
+  container_name: bacula-fd2
+  hostname: bacula-fd2
+  ports:
+    - "9104:9102" # fd -> sd
+  volumes:
+    - /:/mnt:ro
+  environment:
+    BACULA_DEBUG: 100
+    FD_PASSWORD: Uu7ooy5Aequiev9caexe2IengaiTh0Ieiegh7Theweqr
