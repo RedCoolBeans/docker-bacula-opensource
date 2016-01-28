@@ -28,7 +28,6 @@ bacula-dir:
     DB_HOST: bacula-db
     DB_USER: postgres
     DB_PASSWORD: U8azIbKXY9QD
-    BACULA_DEBUG: 100
 
 bacula-sd:
   build: bacula-sd
@@ -40,8 +39,6 @@ bacula-sd:
     - ./configs/sd:/opt/bacula/etc:ro
     - ./configs/ssl:/opt/bacula/etc/ssl:ro
     - ./backups:/b:rw
-  environment:
-    BACULA_DEBUG: 100
 
 bacula-fd:
   build: bacula-fd
@@ -52,5 +49,4 @@ bacula-fd:
   volumes:
     - /:/mnt:ro
   environment:
-    BACULA_DEBUG: 100
     FD_PASSWORD: Uu7ooy5Aequiev9caexe2IengaiTh0Ieiegh7Theweqr
