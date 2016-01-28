@@ -4,3 +4,4 @@
 backups
 *.repo
 configs
+!bacula-fd/configs/
