@@ -11,10 +11,7 @@ ENV BACULA_COMPONENTS "bacula-client"
 ADD configs/bacula.repo /etc/yum.repos.d
 
 RUN yum -q -y update && \
-    yum -q -y install postgresql sudo
-RUN for b in ${BACULA_COMPONENTS}; do yum -y install $b; done
-
-RUN sed -i -e "s/Defaults    requiretty.*/ #Defaults    requiretty/g" /etc/sudoers
+    for b in ${BACULA_COMPONENTS}; do yum -y install $b; done
 
 # Cleanup caches and repository information
 RUN yum clean all; rm -f /etc/yum.repos.d/bacula.repo
