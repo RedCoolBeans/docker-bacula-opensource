@@ -5,7 +5,6 @@
 : ${DIR_NAME:="bacula"}
 : ${MON_NAME:="bacula"}
 : ${FD_NAME:="bacula"}
-: ${FD_PORT:="9102"}
 
 # Only one variable is required, FD_PASSWORD. MON_FD_PASSWORD is derived from it.
 if [ -z "${FD_PASSWORD}" ]; then
@@ -18,7 +17,6 @@ fi
 CONFIG_VARS=(
   FD_NAME
   FD_PASSWORD
-  FD_PORT
   DIR_NAME
   MON_FD_PASSWORD
 )

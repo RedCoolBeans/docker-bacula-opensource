@@ -29,4 +29,4 @@ RUN chmod +x /run.sh
 
 ENTRYPOINT ["/run.sh"]
 
-EXPOSE 9101
+EXPOSE 9102
