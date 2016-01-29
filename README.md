@@ -128,3 +128,15 @@ For supported and security hardened images with Bacula Enterprise, please
 - Mounting a local `bacula-fd.conf` into the `bacula-fd` container is not supported
   yet. Due to the limited configuration possible in this file it is advised to set
   the documented environment variables for now.
+
+## Copyright and license
+
+MIT, please see the LICENSE file.
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
