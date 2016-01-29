@@ -49,8 +49,8 @@ for c in ${CONFIG_VARS[@]}; do
   sed -i "s,@@${c}@@,$(eval echo \$$c)," /opt/bacula/etc/bacula-fd.conf
 done
 
-#echo "==> Verifying Bacula FD configuration"
-#/opt/bacula/bin/bacula-fd -c /opt/bacula/etc/bacula-fd.conf -t
+echo "==> Verifying Bacula FD configuration"
+/opt/bacula/bin/bacula-fd -c /opt/bacula/etc/bacula-fd.conf -t
 
 echo "==> Starting Bacula FD"
 /opt/bacula/bin/bacula-fd -c /opt/bacula/etc/bacula-fd.conf -d ${BACULA_DEBUG} -f
