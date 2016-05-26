@@ -3,7 +3,7 @@ bacula-db-data:
   container_name: bacula-db-data
 
 bacula-db:
-  image: redcoolbeans/bacula-opensource-db:7.2.0
+  image: redcoolbeans/bacula-opensource-db:7.4.0
   container_name: bacula-db
   hostname: bacula-db
   volumes_from:
