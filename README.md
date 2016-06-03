@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a working technology preview of running Bacula (Open Source) 7.4.0 in
+This is a working technology preview of running Bacula (Open Source) 7.4.1 in
 multiple [Docker](https://www.docker.com/) containers.
 
 To make it easier to get started a `docker-compose.yml` is provided and it's
