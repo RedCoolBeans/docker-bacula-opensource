@@ -1,9 +1,9 @@
 bacula-db-data:
-  image: redcoolbeans/bacula-opensource-db-data:7.4.1
+  image: redcoolbeans/bacula-opensource-db-data:latest
   container_name: bacula-db-data
 
 bacula-db:
-  image: redcoolbeans/bacula-opensource-db:7.4.1
+  image: redcoolbeans/bacula-opensource-db:latest
   container_name: bacula-db
   hostname: bacula-db
   volumes_from:
@@ -12,7 +12,7 @@ bacula-db:
     POSTGRES_PASSWORD: U8azIbKXY9QD
 
 bacula-dir:
-  image: redcoolbeans/bacula-opensource-dir:7.4.1
+  image: redcoolbeans/bacula-opensource-dir:latest
   container_name: bacula-dir
   hostname: bacula-dir
   ports:
@@ -30,7 +30,7 @@ bacula-dir:
     DB_PASSWORD: U8azIbKXY9QD
 
 bacula-sd:
-  image: redcoolbeans/bacula-opensource-sd:7.4.1
+  image: redcoolbeans/bacula-opensource-sd:latest
   container_name: bacula-sd
   hostname: bacula-sd
   ports:
@@ -41,7 +41,7 @@ bacula-sd:
     - ./backups:/b:rw
 
 bacula-fd:
-  image: redcoolbeans/bacula-opensource-fd:7.4.1
+  image: redcoolbeans/bacula-opensource-fd:latest
   container_name: bacula-fd
   hostname: bacula-fd
   ports:
